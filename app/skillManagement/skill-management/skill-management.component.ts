@@ -16,7 +16,7 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'app-index',
   templateUrl: './skill-management.component.html',
-  styleUrls: ['./skill-management.css']
+  styleUrls: ['./skill-management.component.css']
 })
 export class SkillManagementComponent implements OnInit {
       
