@@ -1,0 +1,27 @@
+# Node.js with Angular
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    verbose: false
+
+- task: Npm@1
+  displayName: 'npm build'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: 'run build'
+- task: ArchiveFiles@2
+  displayName: 'Archive files'
+  inputs:
+    rootFolderOrFile: dist/my-crud-app
+    includeRootFolder: false
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifacts: drop'
