@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // apiUrl:"https://localhost:7068/api",
-  apiUrl:"https://skills-management-api.azurewebsites.net/"
+  apiUrl:"https://skills-management-api.azurewebsites.net"
 };
 
 /*
