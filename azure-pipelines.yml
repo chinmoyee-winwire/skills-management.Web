@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- main
+- master
 
 pool:
   vmImage: ubuntu-latest
@@ -24,7 +24,7 @@ steps:
 - task: ArchiveFiles@2
   displayName: 'Archive files'
   inputs:
-    rootFolderOrFile: dist/my-crud-app
+    rootFolderOrFile: dist/skills-management-app
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
   displayName: 'Publish artifacts: drop'
