@@ -30,3 +30,10 @@ steps:
   displayName: 'Publish artifacts: drop'
 
 
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(4f771507-356a-4bff-afe4-d2bda014d8cc)'
+    appType: 'webApp'
+    WebAppName: 'skills-management'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
