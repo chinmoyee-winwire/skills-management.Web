@@ -1,7 +1,10 @@
 # Node.js with Angular
+# Build a Node.js project that uses Angular.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+- main
 
 pool:
   vmImage: ubuntu-latest
@@ -11,13 +14,13 @@ steps:
   displayName: 'npm install'
   inputs:
     verbose: false
-
 - task: Npm@1
   displayName: 'npm build'
   inputs:
     command: custom
     verbose: false
     customCommand: 'run build'
+    
 - task: ArchiveFiles@2
   displayName: 'Archive files'
   inputs:
